@@ -19,3 +19,13 @@ We computed the age densities of each population (e.g young_density = #young/tot
 **Surprising !** The younger the population, the higher its diabetes prevalence score. Older population tend not to be affected though. So what do younger areas like so much that adults don't like ? 
 
 {% include_relative html/age_prod_corr.html %}
+
+
+
+
+
+
+
+# Part on Net Income and local authorities
+
+{% include_relative html/corr_matrix_local_auth.html %}
