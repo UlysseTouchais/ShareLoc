@@ -1,6 +1,5 @@
 # DiHabitIs,  a data story made by ShareLoc
 
-{%include_relative html/prod_diab_corr.html%}
 In a [study](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7029018/) analyzing a record of 420M food items purchased at Tesco in greater London, researchers identified nutrients that were highly correlated with diabetes. 
 
 We, ShareLoc, would like to dig further in this dataset and look if other factors correlate with diabetes risk. 
@@ -18,3 +17,5 @@ We computed the age densities of each population (e.g young_density = #young/tot
 ![Alt](pics/corr_age_diab.png)
 
 **Surprising !** The younger the population, the higher its diabetes prevalence score. Older population tend not to be affected though. So what do younger areas like so much that adults don't like ? 
+
+{% include_relative html/age_prod_corr.html %}
