@@ -27,5 +27,5 @@ We computed the age densities of each population (e.g young_density = #young/tot
 
 
 # Part on Net Income and local authorities
-
+Do not hesitate to use the wonderful built in zoom tool that you can find on the top right !
 {% include_relative html/corr_matrix_local_auth.html %}
