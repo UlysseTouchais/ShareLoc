@@ -20,7 +20,7 @@ We computed the age densities of each population (e.g young_density = #young/tot
 
 {% include_relative html/age_prod_corr.html %}
 
-
+{% include_relative html/prod_diab_corr.html %}
 
 
 
