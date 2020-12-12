@@ -1,37 +1,20 @@
-## Welcome to GitHub Pages
+# DiHabitIs,  a data story made by ShareLoc
 
-You can use the [editor on GitHub](https://github.com/UlysseTouchais/ShareLoc/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+{%include_relative prod_diab_corr.html%}
+In a [study](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7029018/) analyzing a record of 420M food items purchased at Tesco in greater London, researchers identified nutrients that were highly correlated with diabetes. 
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+We, ShareLoc, would like to dig further in this dataset and look if other factors correlate with diabetes risk. 
+Note that purchases have been grouped into areas, meaning that we can not perform analysis on individuals, but rather have information about the general tendencies in a specific area.  
 
-### Markdown
+## Age study (make this title fun)
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Our first step is to differentiate areas by age. We have access to three groups of age : 
+- young : 0 to 17 years
+- adult : 18 to 64 years
+- old   : 65+ years
 
-```markdown
-Syntax highlighted code block
+We computed the age densities of each population (e.g young_density = #young/total_population) and hereby plot the correlations between the age densities and diabets prevalence : we only took into account correlations having a p-value < 0.05
 
-# Header 1
-## Header 2
-### Header 3
+![Alt](pics/corr_age_diab.png)
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/UlysseTouchais/ShareLoc/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+**Surprising !** The younger the population, the higher its diabetes prevalence score. Older population tend not to be affected though. So what do younger areas like so much that adults don't like ? 
