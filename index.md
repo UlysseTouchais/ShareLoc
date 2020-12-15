@@ -55,4 +55,6 @@ Do not hesitate to use the wonderful built in zoom tool that you can find on the
 Income classes (the Local authorities represent a great territory, hence a slight difference is still meaningful) 
 {% include_relative html/Income_classes.html %}
 
+Below lies a barchart of income classes and product purchases : 
 
+{% include_relative html/prod_income.html%}
