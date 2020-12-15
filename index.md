@@ -14,15 +14,37 @@ Our first step is to differentiate areas by age. We have access to three groups 
 
 We computed the age densities of each population (e.g young_density = #young/total_population) and hereby plot the correlations between the age densities and diabets prevalence : we only took into account correlations having a p-value < 0.05
 
-![Alt](pics/corr_age_diab.png)
+{% include_relative html/age_diab_corr.html%}
 
 **Surprising !** The younger the population, the higher its diabetes prevalence score. Older population tend not to be affected though. So what do younger areas like so much that adults don't like ? 
 
 {% include_relative html/age_prod_corr.html %}
 
+And how are these products affecting diabetes prevalence ? 
+
 {% include_relative html/prod_diab_corr.html %}
 
+text about that stuff 
 
+Let us see then a scatter plot of young age density vs diabetes prevalence. We also included the entropy of nutrients as a color feature, as correlation of entropy with diabetes prevalence is an important result of the previous research. 
+
+{% include_relative html/age_diab_scatter.html %}
+
+little text about this
+
+## Modeling 
+Plot of entropy vs young density, with diabetes prevalence as color feature : 
+{% include_relative html/h_age_scatter.html %} 
+
+Based on this, we would like to perform a classification model that would estimate if an area has a high, medium or low risk of diabetes prevalence based on only two features : young density and entropy of nutrients. 
+
+We have selected the thresholds based on the diabetes prevalence quartile distribution. 
+
+{% include_relative html/classe.html %}
+
+We chose to perform the logistic regression model, let's see how it performs by checking its ROC curves : 
+
+{% include_relative html/rocs.html %}
 
 
 
