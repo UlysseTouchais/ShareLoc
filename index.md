@@ -28,7 +28,7 @@ text about that stuff
 
 Let us see then a scatter plot of young age density vs diabetes prevalence. We also included the entropy of nutrients as a color feature, as correlation of entropy with diabetes prevalence is an important result of the previous research. 
 
-{% include_relative html/age_diab_scatter.html %}
+{% include_relative html/age_diab_scatter_diab.html %}
 
 little text about this
 
