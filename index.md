@@ -40,7 +40,7 @@ Based on this, we would like to perform a classification model that would estima
 
 We have selected the thresholds based on the diabetes prevalence quartile distribution. 
 
-{% include_relative html/classe.html %}
+{% include_relative html/classes.html %}
 
 We chose to perform the logistic regression model, let's see how it performs by checking its ROC curves : 
 
