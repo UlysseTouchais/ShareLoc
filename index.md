@@ -7,7 +7,7 @@ We, ShareLoc, would like to dig further in this dataset and look if other factor
 Note that purchases have been grouped into areas, meaning that we can not perform analysis on individuals, but rather 
 have information about the general tendencies in a specific area.  
 
-## Age study (make this title fun)
+## Young, fats and sweets
 
 Our first step is to differentiate areas by age. We have access to three groups of age : 
 - young : 0 to 17 years
@@ -44,31 +44,39 @@ as a color feature, as correlation of entropy with diabetes prevalence is an imp
 It appears that young people's food habits are correlated with low entropy. This is consistent with our previous work
 (and the one presented in the paper), which show that entropy is negatively correlated with diabetes.
 
-## Modeling 
-Plot of entropy vs young density, with diabetes prevalence as color feature : 
+## Modeling
+
+Let's now switch the y-axis and the color-axis of the previous graph:
 {% include_relative html/h_age_scatter_diab.html %} 
 
 Based on this, we would like to perform a classification model that would estimate if an area has a high, medium or
-low risk of diabetes prevalence based on only two features : young density and entropy of nutrients. 
+low diabetes prevalence based on only two features : young density and entropy of nutrients. 
 
 We have selected the thresholds based on the diabetes prevalence quartile distribution. 
 
 {% include_relative html/classes.html %}
 
-We chose to perform the logistic regression model, let's see how it performs by checking its ROC curves : 
+We chose to use a logistic regression model, let's see how it performs by checking its ROC curves : 
 
 {% include_relative html/rocs.html %}
 
 We can see that the classifier performs very well for high and low diabetes risk. Quite naturally, it has more trouble 
-with the medium ones, the elbow being reached at tp=0.8 and fp=0.5.
+with the medium ones, for which the curve is closer to a straight line.
 
 
-# Part on Net Income and local authorities
+## Part on Net Income and local authorities
+
 Do not hesitate to use the wonderful built in zoom tool that you can find on the top right !
 {% include_relative html/corr_matrix_local_auth.html %}
 
-Income classes (the Local authorities represent a great territory, hence a slight difference is still meaningful) 
+Let's finally look at the influence of income on food habits. To do this, we start by plotting the average net annual
+income of local authorities. These represent very large territories, therefore even a slight difference is interesting
+to point at.
+ 
 {% include_relative html/Income_classes.html %}
+
+In this chart, local authorities are separated in 3 categories based on their average net annual income. We'll now
+plot nutrient consumptions grouped by income groups:
 
 Below lies a barchart of income classes and product purchases : 
 
