@@ -53,7 +53,7 @@ Based on this, we would like to perform a classification model that would estima
 
 We have selected the threshold for high and low based on the diabetes prevalence median. 
 
-{% include_relative html/plot_scatter_models.htm %}
+{% include_relative html/models_points.html %}
 
 We chose to use a logistic regression model, let's see how it performs by checking its ROC curves : 
 
