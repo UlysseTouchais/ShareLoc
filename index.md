@@ -49,19 +49,16 @@ It appears that young people's food habits are correlated with low entropy. This
 Let's now switch the y-axis and the color-axis of the previous graph:
 {% include_relative html/h_age_scatter_diab.html %} 
 
-Based on this, we would like to perform a classification model that would estimate if an area has a high, medium or
-low diabetes prevalence based on only two features : young density and entropy of nutrients. 
+Based on this, we would like to perform a classification model that would estimate if an area has a high or low diabetes prevalence based on only two features : young density and entropy of nutrients. 
 
-We have selected the thresholds based on the diabetes prevalence quartile distribution. 
+We have selected the threshold for high and low based on the diabetes prevalence median. 
 
-{% include_relative html/classes.html %}
+{% include_relative html/class_models.html %}
 
 We chose to use a logistic regression model, let's see how it performs by checking its ROC curves : 
 
-{% include_relative html/rocs.html %}
+{% include_relative html/ROC_models.html %}
 
-We can see that the classifier performs very well for high and low diabetes risk. Quite naturally, it has more trouble 
-with the medium ones, for which the curve is closer to a straight line.
 
 
 ## Part on Net Income and local authorities
