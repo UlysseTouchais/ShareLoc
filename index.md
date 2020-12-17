@@ -57,7 +57,6 @@ We have selected the threshold for high and low based on the diabetes prevalence
 
 We chose to use a logistic regression model, let's see how it performs by checking its ROC curves : 
 
-{% include_relative html/ROC_models.html %}
 
 
 
