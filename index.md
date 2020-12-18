@@ -1,7 +1,7 @@
 # DiHabitIs,  a data story made by ShareLoc
 
 In a [study](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7029018/) analyzing a record of 420M food items purchased at
-Tesco in greater London, researchers identified nutrients that were highly correlated with diabetes. 
+Tesco in greater London, researchers identified nutrients that were highly correlated with diabetes. They also concluded that diversity in its diet is key to avoid this disease. 
 
 We, ShareLoc, would like to dig further in this dataset and look if other factors correlate with diabetes risk. 
 Note that purchases have been grouped into areas, meaning that we can not perform analysis on individuals, but rather 
@@ -49,14 +49,21 @@ It appears that young people's food habits are correlated with low entropy. This
 Let's now switch the y-axis and the color-axis of the previous graph:
 {% include_relative html/h_age_scatter_diab.html %} 
 
-Based on this, we would like to perform a classification model that would estimate if an area has a high or low diabetes prevalence based on only two features : young density and entropy of nutrients. 
+Based on this, we would like to perform a classification model that would estimate if an area has a high or low diabetes prevalence based on only two features : young density and entropy of nutrients. The fact to have two features is convenient for visualization. 
 
-We have selected the threshold for high and low based on the diabetes prevalence median. 
+We have selected the threshold for high and low based on the diabetes prevalence median, that is, a score of 6,1. 
 
 {% include_relative html/models_points.html %}
 
-We chose to use a logistic regression model, let's see how it performs by checking its ROC curves : 
+We tried two models: Logistic Regression and Random Forest Classifier. 
+### Logistic Regression
+{%include_relative html/LogisticRegression.html%}
 
+### Random Forest Classifier
+{%include_relative html/RandomForest%}
+
+### Performance evaluation
+{%include_relative html/%}
 
 
 
