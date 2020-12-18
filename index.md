@@ -89,3 +89,4 @@ Below lies a barchart of income classes and product purchases :
 We do not notice big differences in terms of product consumptions, but a key observation is that higher income classes
  tend to buy more products that are negatively correlated with diabetes prevalence whereas lower income buy more 
  products that are positively correlated with diabetes prevalence. 
+ 
