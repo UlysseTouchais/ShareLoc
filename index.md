@@ -52,16 +52,20 @@ We tried two models: Logistic Regression and Random Forest Classifier. We split 
 We can identify a clear linear cut for the decision frontier. It does not take into account the intersections of points in the middle of the plot, but identifies a good frontier from which probability becomes higher to belong to class 0 (left) or 1 (right)
 ### Random Forest Classifier
 {%include_relative html/RandomForest.html%}
-
+This model handles better mixed labels and therefore has a more convincing result. We are then going to evaluate its performance on the test set only. 
 ### Performance evaluation
+First, we check a histogram of its scores (between 0 and 1) and true values on the test set.
 {%include_relative html/score_hist.html%}
+This is not a bad result, the model tends to rightly classify the points more frequently thant it does mistakes, especially for the low diabetes cases. 
+Below we plot the TPR and FPR of the model, according to certain thresholds:
 {%include_relative html/fpr_tpr_test.html%}
+And finally we plot its ROC curve:
 {%include_relative html/roc_rf_test.html%}
-
+We reach an AUC of 0.88 for the test set, which is not bad ! 
 
 ## What's On with Net Income ?
 
-Finally, we would like to observe if there are any differences on products consumption between richer or poorer areas and if so, we would like to konw if it has an impact on diabetes. To do this, we start by plotting the average net annual income of local authorities. 
+Finally, we would like to observe if there are any differences on products consumption between richer or poorer areas and if so, we would like to know if it has an impact on diabetes. To do this, we start by plotting the average net annual income of local authorities. Note that we have access to annual income data only for MSOA and that the above study was performed using OSWARD data. We therefore do not have access to diabetes prevalence score for the income analysis, but we can relate to the previous findings to interpret our results. 
  
 {% include_relative html/Income_classes.html %}
 
@@ -70,8 +74,7 @@ In this chart, local authorities are separated in 3 categories based on their av
 {% include_relative html/prod_income.html%}
 
 We do not notice huge differences in terms of product consumptions, but a key observation is that higher income classes
- tend to buy more products that are negatively correlated with diabetes prevalence whereas lower income buy more 
- products that are positively correlated with diabetes prevalence.
- 
+tend to buy more products that are negatively correlated with diabetes prevalence whereas lower income buy more 
+products that are positively correlated with diabetes prevalence. Low income areas buy 83% more bottled water than high income areas. It might be because tap water quality is not as good as in richer areas.  
  ## Conclusion and discussion
  
