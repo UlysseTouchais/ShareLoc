@@ -82,7 +82,7 @@ We have been able to define low diabetes prevalence products for customers seeki
 We investigated the contribution of age groups within areas with diabetes prevalence and have found that younger areas have higher diabetes prevalence scores. 
 This is due to the fact that younger populations tend to buy products that are positively correlated with diabetes prevalence.
 Scatter plots stress on this relationship as younger areas have low entropy which is respectively positively correlated with diabetes.
-Areas were classified into three areas of low, medium and high income according to the net annual income to distinguish between the consumption pattern of different food products. 
-High income areas are considered healthier as they have the tendency to buy products negatively correlated (fruits and veggies, dairy, wine) with diabetes unlike low income areas food consumptions(sweets, fats).
 
-The results of thhis study are to interpret wiht caution. Indeed, we only have access to aggregated data and therefore only see the trends in consumption by areas. Interesting further research would be to determine other factors causes of why younger populations tend to have higher diabetes, and why diabetes is positively correlated with botlled water consumption. 
+From the income point of view, high income areas are considered healthier as they have the tendency to buy products negatively correlated (fruits and veggies, dairy, wine) with diabetes unlike low income areas food consumptions(sweets, fats).
+
+The results of this study are to interpret with caution. Indeed, we only have access to aggregated data and therefore only see the trends in consumption by areas. Interesting further research would be to determine other causes of why younger populations tend to have higher diabetes, and why diabetes is positively correlated with botlled water consumption. 
