@@ -28,22 +28,18 @@ Having the food habits of the younger population under the eyes, we now look for
 
 What a surprise ! Younger areas buy more products that are positively correlated with diabetes.
 
-Furthermore, more surprising observations emerge from these graphs. In particular, we
-notice that water has high diabetes prevalence. We do not think that bottled water is direclty related to diabetes. However, perhaps areas buying more bottled instead of water from the tap are areas with lower quality of life. We do not have yet access to data permitting us to dig further in this aspect, and therefore leave this for further study. 
+Furthermore, surprising observations emerge from these graphs. In particular, we
+notice that water has high diabetes prevalence. We do not think that bottled water is direclty related to diabetes. However, perhaps areas buying more bottled water instead of water from the tap are areas with lower quality of life. We do not have yet access to data permitting us to dig further in this aspect, and therefore leave this for further study. 
 
-Let us see then a scatter plot of young age density vs diabetes prevalence. We also included the entropy of nutrients
-as a color feature, as correlation of entropy with diabetes prevalence is an important result of the previous research. 
+## Modeling diabetes prevalence
+From the above barcharts, we are interested in viewing a scatter plot of young density vs diabetes prevalence. We add two features to the scatter plot: the entropy of nutrients represented by the color and the number of gp patients represented by the radius. We decided to include the entropy because it is one of the main finding of the previous research and the number of gp patients to check if there is no bias at that scale. 
 
 {% include_relative html/age_diab_scatter.html %}
 
-It appears that young people's food habits are correlated with low entropy. This is consistent with our previous work
-(and the one presented in the paper), which show that entropy is negatively correlated with diabetes.
-
-## Modeling
+It appears that younger areas food habits are correlated with low entropy. This is consistent with the previous research which shows that entropy is negatively correlated with diabetes and our above discoveries which show that younger areas are positively correlated with diabetes. 
 
 Let's now switch the y-axis and the color-axis of the previous graph:
 {% include_relative html/h_age_scatter_diab.html %} 
-
 Based on this, we would like to perform a classification model that would estimate if an area has a high or low diabetes prevalence based on only two features : young density and entropy of nutrients. The fact to have two features is convenient for visualization. 
 
 We have selected the threshold for high and low based on the diabetes prevalence median, that is, a score of 6,1. 
