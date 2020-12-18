@@ -63,7 +63,7 @@ We tried two models: Logistic Regression and Random Forest Classifier.
 {%include_relative html/RandomForest%}
 
 ### Performance evaluation
-{%include_relative html/%}
+{%include_relative html/score_hist.html%}
 
 
 
