@@ -1,6 +1,6 @@
 # DiHabitIs,  a data story made by ShareLoc
 In a [study](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7029018/) analyzing a record of 420M food items purchased at
-Tesco in greater London, researchers identified nutrients that were highly correlated with diabetes. They also concluded diversifying nutrients is key to avoid this disease. 
+Tesco in greater London, researchers identified nutrients that were highly correlated with diabetes. They also concluded that diversifying nutrients is key to avoid this disease. 
 
 We, ShareLoc, would like to dig further in this dataset and look if other factors correlate with diabetes risk. We are mainly going to look if age and income have impact on diabetes (in an area scale). 
 
@@ -32,7 +32,7 @@ Furthermore, surprising observations emerge from these graphs. In particular, we
 notice that water has high diabetes prevalence. We do not think that bottled water is direclty related to diabetes. However, perhaps areas buying more bottled water instead of water from the tap are areas with lower quality of life. We do not have yet access to data permitting us to dig further in this aspect, and therefore leave this for further study. 
 
 ## Modeling diabetes prevalence
-From the above barcharts, we are interested in viewing a scatter plot of young density vs diabetes prevalence. We add two features to the scatter plot: the entropy of nutrients represented by the color and the number of gp patients represented by the radius. We decided to include the entropy because it is one of the main finding of the previous research and the number of gp patients to check if there is no bias at that scale. 
+From the above barcharts, we are interested in viewing a scatter plot of young density vs diabetes prevalence. We add two features to the scatter plot: the entropy of nutrients represented by the color and the number of gp patients represented by the radius. We decided to include the entropy (h_nutrients_calories), i.e, the level of diversification in the areas average diet, because it is one of the main variable of the previous research. We also include the number of gp patients to check if there is no bias at that scale. 
 
 {% include_relative html/age_diab_scatter.html %}
 
@@ -76,5 +76,13 @@ In this chart, local authorities are separated in 3 categories based on their av
 We do not notice huge differences in terms of product consumptions, but a key observation is that higher income classes
 tend to buy more products that are negatively correlated with diabetes prevalence whereas lower income buy more 
 products that are positively correlated with diabetes prevalence. Low income areas buy 83% more bottled water than high income areas. It might be because tap water quality is not as good as in richer areas.  
- ## Conclusion and discussion
- 
+
+## Conclusion and discussion
+We have been able to define low diabetes prevalence products for customers seeking healthier food habits.
+We investigated the contribution of age groups within areas with diabetes prevalence and have found that younger areas have higher diabetes prevalence scores. 
+This is due to the fact that younger populations tend to buy products that are positively correlated with diabetes prevalence.
+Scatter plots stress on this relationship as younger areas have low entropy which is respectively positively correlated with diabetes.
+Areas were classified into three areas of low, medium and high income according to the net annual income to distinguish between the consumption pattern of different food products. 
+High income areas are considered healthier as they have the tendency to buy products negatively correlated (fruits and veggies, dairy, wine) with diabetes unlike low income areas food consumptions(sweets, fats).
+
+The results of thhis study are to interpret wiht caution. Indeed, we only have access to aggregated data and therefore only see the trends in consumption by areas. Interesting further research would be to determine other factors causes of why younger populations tend to have higher diabetes, and why diabetes is positively correlated with botlled water consumption. 
