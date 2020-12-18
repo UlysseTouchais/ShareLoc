@@ -64,7 +64,7 @@ We tried two models: Logistic Regression and Random Forest Classifier.
 
 ### Performance evaluation
 {%include_relative html/score_hist.html%}
-{%include_relative html/fpr_tpr_test.htmll%}
+{%include_relative html/fpr_tpr_test.html%}
 {%include_relative html/roc_rf_test.html%}
 
 
