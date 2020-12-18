@@ -40,16 +40,16 @@ It appears that younger areas food habits are correlated with low entropy. This 
 
 Let's now switch the y-axis and the color-axis of the previous graph:
 {% include_relative html/h_age_scatter_diab.html %} 
-Based on this, we would like to perform a classification model that would estimate if an area has a high or low diabetes prevalence based on only two features : young density and entropy of nutrients. The fact to have two features is convenient for visualization. 
+Based on this, we would like to perform a classification model that would estimate if an area has a high (1) or low (0) diabetes prevalence based on only two features : young density and entropy of nutrients. The fact to have two features is convenient for visualization. 
 
 We have selected the threshold for high and low based on the diabetes prevalence median, that is, a score of 6,1. 
 
 {% include_relative html/true_plot.html %}
 
-We tried two models: Logistic Regression and Random Forest Classifier. 
+We tried two models: Logistic Regression and Random Forest Classifier. We split the data into a train and test set. We only train the model with the train set and then plot the overall prediction of the model below (train + test set)
 ### Logistic Regression
 {%include_relative html/LogisticReg.html%}
-
+We can identify a clear linear cut for the decision frontier. It does not take into account the intersections of points in the middle of the plot, but identifies a good frontier from which probability becomes higher to belong to class 0 (left) or 1 (right)
 ### Random Forest Classifier
 {%include_relative html/RandomForest.html%}
 
