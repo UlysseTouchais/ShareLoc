@@ -53,7 +53,7 @@ Based on this, we would like to perform a classification model that would estima
 
 We have selected the threshold for high and low based on the diabetes prevalence median, that is, a score of 6,1. 
 
-{% include_relative html/models_points.html %}
+{% include_relative html/true_plot.html %}
 
 We tried two models: Logistic Regression and Random Forest Classifier. 
 ### Logistic Regression
