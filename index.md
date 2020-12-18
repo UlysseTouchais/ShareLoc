@@ -57,7 +57,7 @@ We have selected the threshold for high and low based on the diabetes prevalence
 
 We tried two models: Logistic Regression and Random Forest Classifier. 
 ### Logistic Regression
-{%include_relative html/LogisticRegression.html%}
+{%include_relative html/LogisticReg.html%}
 
 ### Random Forest Classifier
 {%include_relative html/RandomFores.htmlt%}
